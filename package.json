@@ -1,0 +1,19 @@
+{
+  "name": "castlecss-menu",
+  "version": "0.1.0",
+  "description": "Menu for CastleCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CastleCSS/castlecss-menu.git"
+  },
+  "author": "Gerwin Beumer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CastleCSS/castlecss-menu/issues"
+  },
+  "homepage": "https://github.com/CastleCSS/castlecss-menu#readme"
+}

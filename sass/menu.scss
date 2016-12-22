@@ -1,0 +1,139 @@
+.castlecss-menu {
+	position: relative;
+	background: $theme06;
+}
+
+
+.castlecss-menu-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+
+.castlecss-menu-logo {
+	width: 18.6rem;
+}
+
+.castlecss-menu-nav-label,
+.castlecss-menu-main-nav{
+	margin-left: auto;
+}
+
+
+.castlecss-menu-nav-label {
+	border: none;
+	background: none;
+	color: $color01;
+	font-size: 3.4rem;
+}
+
+
+.main-nav-item {
+	position: relative;
+	display: inline-block;
+
+	> * {
+		color: $color01;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: $padding-default $padding-default*2 $padding-default 0;
+
+		&:hover {
+			color: $theme04;
+		}
+	}
+}
+
+@media only screen and ( min-width: $b2 ) {
+	.castlecss-menu-logo {
+		width: 23.3rem;
+	}
+}
+
+@media only screen and ( min-width: $b4 ) {
+	.castlecss-menu-logo {
+		width: 18.6rem;
+	}
+
+	.main-nav-item {
+		
+		&:hover  {
+
+			.sub { 
+				display: block;
+
+			}
+		}
+		
+		.sub {
+			display: none;
+			min-width: 250px;
+			position: absolute; top: 30px; left: -20px;
+			background: $theme06;
+			box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.75);
+
+			.main-nav-item {
+				display: block;
+				margin-bottom: $margin-default; 
+
+				&:last-child {
+					margin-bottom: 0;					
+				}
+			}
+		}
+	}
+}
+
+@media only screen and ( min-width: $b5 ) {
+	.castlecss-menu-logo {
+		width: 23.3rem;
+	}
+}
+
+@media only screen and ( max-width: $b4 - 1 ) {
+	.castlecss-menu-main-nav {
+		max-height: 0;
+		background: $theme06;
+		width: 100%;
+		transition: max-height 0.3s ease-out;
+	}
+
+	.castlecss-menu-wrap {
+		
+		&.castlecss-menu-active {
+
+			.castlecss-menu-main-nav {
+				max-height: 100rem;
+			}
+
+			.castlecss-menu-bars  {
+				display: none;
+			}
+
+			
+			.castlecss-menu-close  {
+				display: block;
+				font-size: 4rem;
+			}
+
+		}
+	}
+
+	.main-nav-item {
+		display: block;
+
+		> * {
+			display: block;
+			padding: $padding-default $padding-default;
+			font-size: 2.2rem; font-weight: bold;
+		}
+
+		> .sub {
+			padding: 0;
+			margin-left: $margin-default*2;
+		}
+	}
+}
